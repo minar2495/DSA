@@ -2,16 +2,43 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
+        int[] nums = { 6 , 5 , 2 , 8 , 9 , 4};
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        int size = nums.length;
+        int temp = 0;
+        int minIndex = -1;
+
+
+        System.out.println("Before sorting");
+        for(int num : nums){
+            System.out.print(num + "");
         }
-        System.out.println("minar");
+
+        for (int i = 0 ; i<size-1 ;i++){
+            minIndex = i;
+            for (int j = i+1 ; j < size ; j++){
+
+                if(nums[minIndex] > nums[j] )
+                    minIndex = j;
+
+            }
+            temp = nums[minIndex];
+            nums[minIndex] = nums[i];
+            nums[i] = temp;
+
+            for(int num : nums){
+                System.out.print(num);
+            }
+            System.out.println();
+        }
+
+
+
+        System.out.println();
+        System.out.println("After sorting");
+        for(int num : nums){
+            System.out.print(num);
+        }
     }
     //Development Branch Code
 
