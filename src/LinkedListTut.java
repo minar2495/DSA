@@ -5,8 +5,10 @@ public class LinkedListTut {
 
         nums.add(5);
         nums.add(9);
-
         nums.add(6);
+        nums.addFirst(7);
+
+        nums.delete(9);
 //        System.out.println(nums);
 
         nums.printValues();
